@@ -1,0 +1,10 @@
+{% if selected_poll %}
+    <ul>
+
+	{% for choice in selected_poll.choice_set.all %}
+		{{choice.choice_text}}&nbsp;<br>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
